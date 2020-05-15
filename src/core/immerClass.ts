@@ -118,7 +118,7 @@ export class Immer implements ProducersFns {
 		} else {
 			result = recipe(base)
 			if (result === NOTHING) return undefined
-			if (result === undefined) result = base
+			if (result === undefined) result = base // 当传入的都是函数的时候，返回base函数
 			if (this.autoFreeze_) freeze(result, true)
 			return result
 		}

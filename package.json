@@ -30,6 +30,7 @@
     "test:flow": "yarn flow check __tests__/flow",
     "test:build": "yarn build && NODE_ENV='production' yarn jest --config jest.config.build.js",
     "watch": "jest --watch",
+    "test-a": "jest ./__tests__/curry.js",
     "coverage": "jest --coverage",
     "coveralls": "jest --coverage && cat ./coverage/lcov.info | ./node_modules/.bin/coveralls && rm -rf ./coverage",
     "build": "rimraf dist/ && tsdx build --name immer --format esm,cjs,umd && yarn build:flow",
